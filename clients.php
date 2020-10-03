@@ -19,6 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
     <script type="text/javascript" src="js/dashboard.js"></script>
+    <script type="text/javascript" src="js/clients.js"></script>
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -68,7 +69,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <a class="dropdown-item" href="#top">Tasks</a>
                         <a class="dropdown-item" href="#top">Etc..</a>
                     </div>
-                </li><!-- Menu for smaller devices END -->
+                </li><!--Menu for smaller devices END -->
             </ul>
         </div>
     </nav><!-- NavBar END -->
@@ -76,7 +77,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="row" id="body-row">
         <!-- Seitenleiste -->
         <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
-            <!-- d- * hides the sidebar in smaller devices. The entries can be saved in the navbar menu-->
+            <!-- d- * hides the sidebar in smaller devices. The entries can be saved in the navbar menu -->
             <!-- Bootstrap -->
             <ul class="list-group">
                 <!-- Separator with title -->
@@ -114,10 +115,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <span class="fas fa-angle-down ml-auto"></span>
                     </div>
                 </a>
-                <!-- Content of the submenu-->
+                <!-- Content of the submenu -->
                 <div id='submenu2' class="collapse sidebar-submenu">
-                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                        <span class="menu-collapsed">Settings</span>
+                    <a href="clients.php" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Client's Cards</span>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
                         <span class="menu-collapsed">Password</span>
@@ -164,16 +165,64 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </div>
                 </a>
             </ul><!-- List Group END-->
-        </div> <!-- Sidebar container END -->
+        </div><!-- Sidebar container END -->
        
        
         <!-- MAIN Inside Collumn-->
         <div class="col p-4">
-            <h1 style="color:white;" class="display-4">Welcome Sotiris</h1>
-            <div class="card">
-           
-            </div><!-- Main Col END -->
+        <h1 style="color:white;" class="display-4 text-center">Welcome Sotiris</h1>
+            <div class="card" style="padding-top:50px;">      
+                <!-- Main Col END -->
+
+                <div class="card-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class=" col-6">
+                                <button onclick=" myFunction()" >ADD PATIENT</butto> 
+                                
+                            </div><!-- Main Col END -->
+                            <div class=" col-6">
+                                
+                                <input placeholder="Search Patient"></input> 
+                            </div>
+                           </div> 
+                    </div>
+                  
+            </div>
+
+
+            <dialog id="myDialog">
+                <div class="col p-4">
+                    <h1 class="white text-center">ADD PATIENT</h1>
+                        <div class="card" style="padding-top:50px;">      
+                            <!-- Main Col END -->
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class=" col-lg-12 body-patient"  >
+                                            <form action="#" style="padding-top:50px;">
+                                                <label for="fname">First name:</label><br>
+                                                <input type="text" id="fname" name="fname" value="John"><br>
+                                                <label for="lname">Last name:</label><br>
+                                                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                                
+                                            
+                                                <button onclick="#">Submit</button>  
+                                            </form> 
+                                        </div>
+                                    </div>  
+                                </div>              
+                            </div>
+                        </div><!-- body-row END -->
+                </div>
+        </dialog>
+
         </div><!-- body-row END -->
+
+
+        <script>
+
+</script>
  </div>
 </body>
 </html>
