@@ -8,9 +8,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
@@ -18,28 +19,32 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/clients.css" />
     <script type="text/javascript" src="js/dashboard.js"></script>
     <script type="text/javascript" src="js/clients.js"></script>
 
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!--Font Awsome LIB-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 </head>
+
 <body>
-  
+
     <!-- Top NAVbar-->
     <!-- Bootstrap NavBar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-primary">
@@ -69,7 +74,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <a class="dropdown-item" href="#top">Tasks</a>
                         <a class="dropdown-item" href="#top">Etc..</a>
                     </div>
-                </li><!--Menu for smaller devices END -->
+                </li>
+                <!--Menu for smaller devices END -->
             </ul>
         </div>
     </nav><!-- NavBar END -->
@@ -166,63 +172,73 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </a>
             </ul><!-- List Group END-->
         </div><!-- Sidebar container END -->
-       
-       
+
+
         <!-- MAIN Inside Collumn-->
         <div class="col p-4">
-        <h1 style="color:white;" class="display-4 text-center">Welcome Sotiris</h1>
-            <div class="card" style="padding-top:50px;">      
-                <!-- Main Col END -->
+            <h1 style="color:white;" class="display-4">Welcome Sotiris</h1>
+            <div class="card">
+                <h5 class="card-header font-weight-light">Add and Search Patients</h5>
+
 
                 <div class="card-body">
                     <div class="container text-center">
                         <div class="row">
                             <div class=" col-6">
-                                <button onclick=" myFunction()" >ADD PATIENT</butto> 
-                                
+                                <button type="button" class="btn btnAqua btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal">Add Patient</button>
                             </div><!-- Main Col END -->
-                            <div class=" col-6">
-                                
-                                <input placeholder="Search Patient"></input> 
+
+                            <!-- Search-->
+
+                            <div class="col-6 d-flex flex-row-reverse bd-highlight">
+
+
+                                <form action="">
+                                    <input type="search">
+                                    <i class="fa fa-search"></i>
+                                </form>
+
+
+
                             </div>
-                           </div> 
+
+                        </div>
                     </div>
-                  
-            </div>
 
-
-            <dialog id="myDialog">
-                <div class="col p-4">
-                    <h1 class="white text-center">ADD PATIENT</h1>
-                        <div class="card" style="padding-top:50px;">      
-                            <!-- Main Col END -->
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class=" col-lg-12 body-patient"  >
-                                            <form action="#" style="padding-top:50px;">
-                                                <label for="fname">First name:</label><br>
-                                                <input type="text" id="fname" name="fname" value="John"><br>
-                                                <label for="lname">Last name:</label><br>
-                                                <input type="text" id="lname" name="lname" value="Doe"><br><br>
-                                                
-                                            
-                                                <button onclick="#">Submit</button>  
-                                            </form> 
-                                        </div>
-                                    </div>  
-                                </div>              
-                            </div>
-                        </div><!-- body-row END -->
                 </div>
-        </dialog>
+            </div><!-- Main Col END -->
+        </div><!-- body-row END -->
+
+
+        <!-- Modal Add Patient-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
 
         </div><!-- body-row END -->
 
 
         <script>
 
-</script>
- </div>
+        </script>
+    </div>
 </body>
+
 </html>

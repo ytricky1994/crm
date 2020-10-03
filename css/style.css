@@ -9,6 +9,13 @@ html {
     background: linear-gradient(#141e30, #243b55);
   }
   
+  .btnAqua{
+    background-color:#03e9f4!important; 
+    font-weight:700!important;
+    border: none!important;
+    color: white!important;
+
+  }
   .login-box {
     position: absolute;
     top: 50%;
