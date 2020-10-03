@@ -1,5 +1,5 @@
 // Hide submenus
-// test sianios
+
 $('#body-row .collapse').collapse('hide');
 
 // Collapse/Expand icon

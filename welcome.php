@@ -63,7 +63,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"> Menu </a>
                     <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
-                        <a class="dropdown-item" href="#top">Dasfsafshboard</a>
+                        <a class="dropdown-item" href="#top">Dashboard</a>
                         <a class="dropdown-item" href="#top">Profile</a>
                         <a class="dropdown-item" href="#top">Tasks</a>
                         <a class="dropdown-item" href="#top">Etc..</a>
